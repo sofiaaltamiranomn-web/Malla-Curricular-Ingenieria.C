@@ -1,1 +1,110 @@
+/* ------------------------
+   PALETA DE COLORES
+   Verde principal: #1b5e20
+   Verde claro: #4caf50
+   Dorado: #c9a227
+   Fondo: #f5f7f5
+------------------------- */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f7f5;
+    color: #1b1b1b;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b5e20;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* Columna por semestre */
+.semestre {
+    min-width: 260px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.semestre h2 {
+    text-align: center;
+    color: #1b5e20;
+    border-bottom: 2px solid #c9a227;
+    padding-bottom: 5px;
+}
+
+/* Ramo */
+.ramo {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ramo:hover {
+    background-color: #dcedc8;
+}
+
+/* Aprobado */
+.ramo.aprobado {
+    background-color: #c9a227;
+    color: white;
+    text-decoration: line-through;
+    border-left-color: #8d6e00;
+}
+
+/* Bloqueado visual */
+.ramo.bloqueado {
+    opacity: 0.6;
+}
+
+/* Mensaje */
+.mensaje {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1b5e20;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .semestre {
+        min-width: 220px;
+    }
+}
 
